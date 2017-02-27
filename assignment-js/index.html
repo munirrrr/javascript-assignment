@@ -1,0 +1,77 @@
+'**************************************
+' Name: Odd and Even Number Checker in JavaScript
+' By:MD: MUNIRUL ISLAM
+'**************************************
+
+<html>
+<head>
+<style>
+body {
+ background-color:lightgreen;
+ font-size:25px;
+ color:blue;
+ }
+ label {
+float: left;
+width: 30%;
+text-align: left;
+margin-right: 1em;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+-o-text-overflow: ellipsis;
+}
+.form-field-no-caption {
+margin-le
+input[type="radio"]{
+ float:left;
+}
+</style>
+<meta charset="UTF-8">
+<title> Odd and Even Number Checker in JavaScript</title>
+ </head>
+ <script type="text/javascript">
+ 
+function find_odd_even() {
+	 var input = document.getElementById("userInput").value;
+var number = parseInt(input);
+if (isNaN(number)) {
+alert("Please enter a number.");
+document.getElementById("userInput").value="";
+document.getElementById("result").innerHTML = "";
+document.getElementById("userInput").focus();
+}
+ 
+else if (input.length === 0) {
+alert("Please enter a valid input");
+document.getElementById("userInput").focus();
+}
+else if (number % 2 == 0 ) {
+document.getElementById("result").innerHTML = number + " is even number.";
+}
+else {
+	 document.getElementById("result").innerHTML = number + " is odd number.";
+ }
+}
+function clear_textbox(){
+ document.getElementById("result").innerHTML = "";
+ document.getElementById("userInput").value="";
+ document.getElementById("userInput").focus();
+ 
+}
+</script>
+
+<body>
+<h4> Odd and Even Number Checker in JavaScript </h4>
+ Enter a Number 
+<input type="text" id="userInput" autofocus value = "" />
+<input type="submit" value="Check" 
+title="Click here to check if the given number is an ODD or EVEN number."
+onclick="find_odd_even()" />
+<input type="submit" value="Clear" 
+ title="Click here to clear the text box."
+onclick="clear_textbox()" />
+	<br><br>
+	<p id="result"></h1>
+</body>
+</html>
